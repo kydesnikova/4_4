@@ -128,22 +128,27 @@ int CTree::odd_cnt()
 	return odd_cnt(root);
 }
 
-int CTree::depth_tree(CVetv* dr) {
+int CTree::depth_tree(CVetv* dr) 
+{
 	if (!dr) return NULL;
 
 	int left, right;
 
-	if (dr->l != NULL) {
+	if (dr->l != NULL) 
+	{
 		left = depth_tree(dr->l);
 	}
-	else {
+	else 
+	{
 		left = 0;
 	}
 
-	if (dr->r != NULL) {
+	if (dr->r != NULL) 
+	{
 		right = depth_tree(dr->r);
 	}
-	else {
+	else 
+	{
 		right = 0;
 	}
 
@@ -152,7 +157,8 @@ int CTree::depth_tree(CVetv* dr) {
 	return max + 1;
 }
 
-int CTree::depth_tree() {
+int CTree::depth_tree() 
+{
 	return depth_tree(root);
 }
 
